@@ -60,7 +60,12 @@
 			
 			<input type="button" onclick="valid2(document.getElementById('intelform'))" name="button" value="Готово">
 		</form>
-		
+		<form name="inletname" action="" method="post" id="intelformname">
+			<label for="inlname">Мне не нравится человек номер:</label>
+			<input type="text" name="inlname" placeholder="Введите сколько людей должно выйти" id="inlname"/> <br/><br/>
+			
+			<input type="button" onclick="valid3(document.getElementById('intelformname'))" name="button" value="Готово">
+		</form>
 		<br/>
 		<label>Количечтво людей в очереди:</label><span id='txt1'></span>
 		</br>
@@ -101,6 +106,21 @@
 					var a=delarrr(inl);
 				}
 			}
+			function valid3(form){
+				var inlname=form.inlname.value;
+				
+				if (inlname.replace (/\d/g, '').length){
+					alert("поле должно быть цивра");
+				}
+				else {
+					if (inlname<=document.getElementById('matrix').children.length && inlname>0){
+						var ab=delarrrname(inlname);
+					}
+					else{
+						alert('Значение больше длинны очереди');
+					}
+				}
+			}
 			function arrr(name){
 				var table = document.createDocumentFragment();
 			   for (var q=0; q<1; q++){
@@ -130,6 +150,7 @@
 			   document.getElementById('matrix').insertBefore(table, tab.firstChild);
 			   document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
 			}
+			
 			function delarrr(n){
 				var table = document.getElementById('matrix');
 			   for (var q=0; q<n; q++){
@@ -137,10 +158,14 @@
 					document.getElementById('txt2').innerHTML = table.firstChild.textContent;
 					table.removeChild(table.firstChild)
 					document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
-					var smen_img=smena();
 					document.getElementById("inl").value = '';
 					var cartoon=smena();//смена картинки
 				}
+			}
+			function delarrrname(inlname){
+				var table1 = document.getElementById('matrix');
+					table1.removeChild(table1.childNodes[inlname])
+					document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
 			}
 			
 			function func() {
