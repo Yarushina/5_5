@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	 
+		<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/p.." integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+		<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+		<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<title> пробник </title>
+	<link href="bootstrap4-glyphicons/css/bootstrap-glyphicons.min.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript"> 
+	$(function () {$('[data-toggle="tooltip"]').tooltip()}) 
+	</script>
+	<!-- <link rel="stylesheet" href="bootstrap.min.css" /> -->
+
+	<link  rel="stylesheet" href="style.css" type="text/css"/>
+</head>
+<body bgcolor="#735184">
+	<g id="snowman" cursor="pointer">
+	<path id="body" fill="#EAF5F9" d="M35.6,53.2c23-2.6,42.2,41.9,3.4,44.3C0.2,99.9,6.7,56.4,35.6,53.2z"></path>
+	<path id="neck" fill="#1A92B7" d="M36,63c-12.8,0-18.4-2.9-16.8-6.2c1.4-2.8,12.6-1,17.1-1c8.4,0,14.5-4.3,17,0
+	C55.5,59.7,47,63,36,63z"></path>
+	<path id="scarf" fill="#1A92B7" d="M49.4,76.9c-0.7-4.2-3.2-18.3-7.1-17.3c-3.5,0.9-1.7,10.8-0.7,15.4c0.3,1.5,1.5,3.1,3,3.4
+	c1.3,0.3,2.6,0.3,3.9,0.2C49.2,78.5,49.6,77.5,49.4,76.9z"></path>
+	<g id="head">
+	<path id="top" fill="#EAF5F9" d="M33.5,26.5c17.7-0.2,30.2,33.8,0.9,32.2C6,57.3,15.7,26.7,33.5,26.5z"></path>
+	<path id="eye1" d="M41.9,38c0.2,2-3.4,3.9-3.6,0.6C38.1,35.3,41.7,36,41.9,38z"></path>
+	<path id="eye2" d="M27.8,40.6c0.8,1.8,5.2,1.4,3.6-1.5C30,36.2,27,38.7,27.8,40.6z"></path>
+	<path id="mouth" fill="none" stroke="#000000" stroke-miterlimit="10" d="M27.4,49c0.4,0.3,0.8,0.6,1.2,0.9c0.4,0.3,0.8,0.6,1.1,1
+	c0.3,0.4,0.6,0.8,1.1,0.9c0.5,0.1,0.9-0.3,1.4-0.4c0.8-0.2,1.7,0.2,2.6,0.4c1.3,0.3,2.6-0.1,3.9,0.1c0.4,0.1,0.9,0.2,1.3,0.1
+	c0.4-0.1,0.7-0.5,1.1-0.6c0.3-0.1,0.6-0.1,0.9-0.1c0.5-0.1,1-0.4,1.4-0.7c0.3-0.3,1.3-1.2,1.6-1.5"></path>
+	<path id="nose" fill="#DB7816" d="M35.4,43c-0.6,0.6-0.9,1.2-0.8,1.9c0.1,1,1,1.9,2,2c1.7,0.2,3.3,0.3,4.7,0.4
+	c2.9,0.3,5.5-0.9,8.3-0.9c0.7,0,0.9-0.8,0.3-1.2c-1.6-1-3.3-1.6-5.3-1.8c-1.5-0.2-2.5,0.2-4.2-0.1c-1-0.2-1.9-0.8-2.8-1
+	C36.7,42.2,35.9,42.4,35.4,43z"></path>
+	</g>
+	</g>
+	<nav class="navbar navbar-default navbar-fixed-top">
+		<div class="container">
+	        <div class="navbar-header">
+	            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#menushechka">
+		            <span class="sr-only">открыть навигацию</span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+		            <span class="icon-bar"></span>
+	            </button>
+	            <a href="#">
+	            	<p>
+						<i class="glyphicon glyphicon-gift"></i>
+					</p>
+	            </a>
+	          </div>
+	          <div class="collapse navbar-collapse menushechka">
+	            <ul class="nav navbar-nav">
+	              <li class="active"><a href="file:///C:/Users/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F/Desktop/%D1%83%D1%87%D1%91%D0%B1%D0%B0,%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/web/%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53/%D0%BF%D1%80%D0%BE%D0%B1%D0%BD%D0%B8%D0%BA.html">главная</a></li>
+	              <li><a href="#">уkрашения</a></li>
+	              <li class="root">
+	                <a href="#" class="dropdown-toggle" data-toggle="dropdown">задания <b class="caret"></b></a>
+	                <ul class="dropdown-menu">
+	                  <li><a href="file:///C:/Users/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F/Desktop/%D1%83%D1%87%D1%91%D0%B1%D0%B0,%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/web/%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53/%D0%BA%D0%BE%D1%82%D0%B5%D1%87%D0%BA%D0%B0.html">котиик</a></li>
+	                  <li><a href="file:///C:/Users/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F/Desktop/%D1%83%D1%87%D1%91%D0%B1%D0%B0,%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/web/%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53/mathml.html">мат. формулы</a></li>
+	                  <li class="dropdown-submenu"> <a tabindex="-1" href="#">подготовка к новому году</a>
+	                      <ul class="dropdown-menu">
+	                          <li><a tabindex="-1" href="#">украшение дома</a>
+	                          </li>
+	                          <li> <a href="file:///C:/Users/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F/Desktop/%D1%83%D1%87%D1%91%D0%B1%D0%B0,%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/web/%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53/gjft.html">варианты подарков</a>
+	                          </li>
+	                          <li><a href="#">еда на новый год</a>
+	                          </li>
+	                          <li><a href="#">гороскопы</a>
+	                          </li>
+	                      </ul>
+	                  </li>
+	                </ul>
+	              </li>
+	              <li><a href="file:///C:/Users/%D0%9D%D0%B0%D1%82%D0%B0%D0%BB%D1%8C%D1%8F/Desktop/%D1%83%D1%87%D1%91%D0%B1%D0%B0,%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B8%D1%80%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B%20%D0%BF%D1%80%D0%BE%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D1%8B/web/%D0%B7%D0%B0%D0%B4%D0%B0%D0%BD%D0%B8%D0%B53/%D0%BA%D0%BE%D0%BD%D1%82%D0%B0%D0%BA%D1%82%D1%8B.html#">контакты</a></li>
+	            </ul>
+	        </div>
+	    </div>
+    </nav> 
+       	<div id="carousel-generic" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+			     <li data-target="#carousel-generic" data-slide-to="0" class="active"></li>
+			     <li data-target="#carousel-generic" data-slide-to="1"></li>
+			     <li data-target="#carousel-generic" data-slide-to="2"></li>
+			     <li data-target="#carousel-generic" data-slide-to="4"></li>
+			     <li data-target="#carousel-generic" data-slide-to="5"></li>
+			     <li data-target="#carousel-generic" data-slide-to="6"></li>
+			     <li data-target="#carousel-generic" data-slide-to="7"></li>
+			</ol>
+				<div class="carousel-inner backFill">
+			    	<div class="item active carousel-item">
+			      		<img class="d-block" src="https://milalink.ru/uploads/posts/2018-12/1544443161_ded-moroz2.jpg" width="1024px"
+			      		height="1024px">
+				      	<div class="carousel-caption">
+				      	</div>
+			    	</div>
+			    	<div class="item carousel-item">
+			      		<img class="d-block" src="https://million-wallpapers.ru/wallpapers/4/85/315192143964145.jpg" width="1024px" >
+			      		<div class="carousel-caption">
+			      		</div>
+			    	</div>
+			    <div class="item carousel-item">
+			      	<img class="d-block" src="https://www.psyoffice.ru/uploads/news/18/2018/article-41436-0.jpg" width="1024px">
+			      	<div class="carousel-caption">
+			      	</div>
+			    </div>
+			    <div class="item carousel-item">
+			      	<img class="d-block" src="https://www.nastol.com.ua/pic/201701/1440x900/nastol.com.ua-200052.jpg" width="1024px">
+			      	<div class="carousel-caption">
+			      	</div>
+			    </div>
+			    <div class="item carousel-item">
+			      	<img class="d-block" src="https://i.artfile.me/wallpaper/03-07-2018/3000x2002/deti-deti-so-vzroslymi-semya-prazdnik-el-1359535.jpg" width="1024px">
+			      	<div class="carousel-caption">
+			      	</div>
+			    </div>
+			    <div class="item carousel-item">
+			      	<img class="d-block" src="https://mikhailnosikov.ru/wp-content/uploads/2017/01/MN-41-1.jpg" >
+			      	<div class="carousel-caption">
+			      	</div>
+			    </div>
+			    <div class="item carousel-item">
+			      	<img class="d-block" src="https://i.pinimg.com/originals/f7/49/ef/f749ef6eb08eba863dc3562ee11d3032.jpg" width="1024px">
+			      	<div class="carousel-caption">
+			      	</div>
+			    </div>
+			</div>
+			   	<a class="left carousel-control" href="#carousel-generic" role="button" data-slide="prev">
+			    	<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    	<span class="sr-only">Предыдущий</span>
+			  	</a>
+			  	<a class="right carousel-control" href="#carousel-generic" role="button" data-slide="next">
+			    	<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    	<span class="sr-only">Следующий</span>
+			  	</a>
+			</div>
+			<ul class="lightrope">
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			  <li></li>
+			</ul>
+			<div class="container-fluid cont">
+				<div class="container">
+					<div class="row">
+						<h1 id="blink" align="center">
+							Успей записаться в очередь на фотографию с ёлкой!
+						</h1>
+					</div>
+				</div>
+
+			<div class="col-xs-3 col-sm-3 col-md-3  colo1">
+				<div class="media">
+	  				<a class="pull-left" href="#">
+	    				<img class="media-object" src="C:\Users\Наталья\Desktop\учёба, программирование\проекты программы\яимп\мост2.jpg" >
+	  				</a>
+				</div>
+			</div>
+
+			<div class="col-xs-4 col-sm-4 col-md-4  colo2">
+				
+			    <p>'+'-обычный гражданин(встаёт в конец очереди);</p>
+				</br>
+				<p>'*'-VIP гражданин(встаёт в начало очереди).</p>
+				
+				</br>
+				<label>Сейчас вышел из очереди:</label><span id='txt2'></span>
+				</br>
+				<form name="myForm" action="" method="post" id="blaform">
+					<label for="mane">Введите имя вошедшего в очередь:</label>
+					<input type="text" name="name" placeholder="Введите имя вошедшего в очередь" id="name"/> <br/><br/>
+					<label for="n">Действиу с очередью: </label>
+					<input type="text" name="n" placeholder="Введите действие" id="n"/> <br/><br/>
+					
+					<input type="button" onclick="valid(document.getElementById('blaform'))" name="button" value="Готово">
+				</form>
+				</br>
+				<form name="inlet" action="" method="post" id="intelform">
+					<label for="inl">Введите сколько людей должно выйти:</label>
+					<input type="text" name="inl" placeholder="Введите сколько людей должно выйти" id="inl"/> <br/><br/>
+					
+					<input type="button" onclick="valid2(document.getElementById('intelform'))" name="button" value="Готово">
+				</form>
+				
+				<br/>
+				<label>Количечтво людей в очереди:</label><span id='txt1'></span>
+				</br>
+				</br>
+				
+				<table id="matrix" cellspacing="5" cellpadding="10" border="1" ></table>
+				
+			<!-- <img id='myimg' src="путь к файлу" alt="альтернативный текст" /> -->
+			<br>
+			</div>
+			<div class="col-xs-3 col-sm-3 col-md-3  colo3">
+				<div class="media">
+	  				<a class="pull-left" href="#">
+	    				<img class="media-object" src="C:\Users\Наталья\Desktop\учёба, программирование\проекты программы\яимп\мост.jpg" >
+	  				</a>
+				</div>
+			</div>
+		</div>
+		<span class="snowman"></span>
+		<script src="snowfall.jquery.min.js"></script>
+		<script>
+
+			$(document).ready(function() {
+
+				document.body.className  = "darkBg";
+
+				$(document).snowfall({
+					flakeCount: 400 // Количество снежинок
+				});
+
+			});
+
+		</script>
+		<script>
+					var list=[];
+				function valid(form, dec){
+					var name=form.name.value;
+					var n=form.n.value;
+					if (name==""||n==''){
+						alert("поле должно быть заполнено");
+					}
+					else if (n.length>1 && n.indexOf("+")<1 && n.indexOf("*")<1) {
+						alert ('Введите корректное действие');
+					}
+					else {
+						if (n.indexOf("+")>-1){
+							var a=arrr(name);
+							list.push(name);
+						}
+						if (n.indexOf("*")>-1){
+						    var b=arrrvip(name);
+							list.unshift(name);
+						}
+						 document.getElementById("name").value = ''
+					}
+					
+				}
+				function valid2(form){
+					var inl=form.inl.value;
+					
+					if (inl.replace (/\d/g, '').length){
+						alert("поле должно быть цивры");
+					}
+					else {
+						var a=delarrr(inl);
+					}
+				}
+				function arrr(name){
+					var table = document.createDocumentFragment();
+				   for (var q=0; q<1; q++){
+						var tr=document.createElement('tr');
+						for (var p=0; p<1; p++){
+							var td = document.createElement('td');
+							td.innerHTML=name ;
+							tr.appendChild(td);
+						}
+						table.appendChild(tr);
+					}
+				   document.getElementById('matrix').appendChild(table);
+				   document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+				}
+				function arrrvip(name){
+					var table = document.createDocumentFragment();
+				   for (var q=0; q<1; q++){
+						var tr=document.createElement('tr');
+						for (var p=0; p<1; p++){
+							var td = document.createElement('td');
+							td.innerHTML=name ;
+							tr.appendChild(td);
+						}
+						table.appendChild(tr);
+					}
+					var tab = document.getElementById('matrix');
+				   document.getElementById('matrix').insertBefore(table, tab.firstChild);
+				   document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+				}
+				function delarrr(n){
+					var table = document.getElementById('matrix');
+				   for (var q=0; q<n; q++){
+				        alert (table.firstChild.textContent);
+						document.getElementById('txt2').innerHTML = table.firstChild.textContent;
+						table.removeChild(table.firstChild)
+						document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+						var smen_img=smena();
+						document.getElementById("inl").value = '';
+						var cartoon=smena();//смена картинки
+					}
+				}
+				
+				function func() {
+				var viner=null
+				   if (document.getElementById('matrix').children.length>5){
+						viner='И супер приз выиигал человек с именем: '+document.getElementById('matrix').childNodes[(Math.floor(Math.random() * ((document.getElementById('matrix').children.length) - 1 + 1)) + 1)].textContent
+						alert(viner);
+				   }
+				  
+				}
+				idTimer = setInterval('func();',4000);
+				
+				var mas=["Снимок экрана (90).png","я тут","нееееееееееееееееет"]; // Все названия картинок
+					function smena(){
+					   var r=Math.floor(Math.random()*mas.length);
+					   document.getElementById("myimg").alt=mas[r];//ЕСЛИ ALT заменить на src товсё заработает ( document.getElementById("myimg").src=mas[r];) [этонужно чтоб бяло видно что хоть что то меняется']
+					}
+		</script>
+		<script type="text/javascript" src="https://uguide.ru/js/script/snowcursor.min.js">  </script>  <style type="text/css">  body, a:hover {cursor: url(https://uguide.ru/js/script/snowcurser.cur), url(https://uguide.ru/js/script/snowcurser.png), auto !important;}  </style>
+		<script type="text/javascript" src="https://uguide.ru/js/script/snowcursor.min.js"></script>
+
+	<!— jQuery (necessary for Bootstrap's JavaScript plugins) —> 
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.mi.."></script> 
+	<!— Latest compiled and minified JavaScript —> 
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap..." integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+	<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
