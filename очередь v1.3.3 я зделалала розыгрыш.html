@@ -144,7 +144,12 @@
 			}
 			
 			function func() {
-			  alert( 'СДЕСЬ ДОЛЖЕН БЫТЬ РОЗЫГРЫШ' );
+			var viner=null
+			   if (document.getElementById('matrix').children.length>5){
+					viner='И супер приз выиигал человек с именем: '+document.getElementById('matrix').childNodes[(Math.floor(Math.random() * ((document.getElementById('matrix').children.length) - 1 + 1)) + 1)].textContent
+					alert(viner);
+			   }
+			  
 			}
 			idTimer = setInterval('func();',4000);
 			
