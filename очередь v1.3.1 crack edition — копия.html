@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="UTF-8">
+		<title>Оередь на фотгорафию возле новогодней ёлки</title>
+		<style type="text/css">
+		form { border: 3px solid black; 
+		}
+		input{width:150Px;
+		height:30Px;
+		color: black;
+		background-color:pink;
+		font: bold italic 110% sans-serif;
+		}
+		body{
+		background-color:green;
+		}
+		span{
+			height:30Px;
+		color: black;
+		background-color:red;
+		padding:10px;
+		padding-left:20px;
+		padding-right:20px;
+		font: bold italic 110% sans-serif;
+		}
+		label{
+			height:30Px;
+			color: black;
+			background-color:orange;
+			padding:8px;
+			font: bold italic 110% sans-serif;
+		}
+	</style>
+	<link rel="stylesheet" href="css.css">
+	</head>
+	<body>
+		<span>
+	    <span>'+'-обычный гражданин(встаёт в конец очереди);</span>
+		<span>'*'-VIP гражданин(встаёт в начало очереди).</span>
+		</span>
+		</br></br>
+		</br>
+		<label>Сейчас вышел из очереди:</label><span id='txt2'></span>
+		</br>
+		</br>
+		
+		<form name="myForm" action="" method="post" id="blaform">
+			<label for="mane">Введите имя вошедшего в очередь:</label>
+			<input type="text" name="name" placeholder="Введите имя вошедшего в очередь" id="name"/> <br/><br/>
+			<label for="n">Действиу с очередью: </label>
+			<input type="text" name="n" placeholder="Введите действие" id="n"/> <br/><br/>
+			
+			<input type="button" onclick="valid(document.getElementById('blaform'))" name="button" value="Готово">
+		</form>
+		</br>
+		<form name="inlet" action="" method="post" id="intelform">
+			<label for="inl">Введите сколько людей должно выйти:</label>
+			<input type="text" name="inl" placeholder="Введите сколько людей должно выйти" id="inl"/> <br/><br/>
+			
+			<input type="button" onclick="valid2(document.getElementById('intelform'))" name="button" value="Готово">
+		</form>
+		
+		<br/>
+		<label>Количечтво людей в очереди:</label><span id='txt1'></span>
+		</br>
+		</br>
+		
+		<table id="matrix" cellspacing="5" cellpadding="10" border="1" ></table>
+		<script>
+			var list=[];
+			function valid(form, dec){
+				var name=form.name.value;
+				var n=form.n.value;
+				if (name==""||n==''){
+					alert("поле должно быть заполнено");
+				}
+				else if (n.length>1 && n.indexOf("+")<1 && n.indexOf("*")<1) {
+					alert ('Введите корректное действие');
+				}
+				else {
+					if (n.indexOf("+")>-1){
+						var a=arrr(name);
+						list.push(name);
+					}
+					if (n.indexOf("*")>-1){
+					    var b=arrrvip(name);
+						list.unshift(name);
+					}
+					 document.getElementById("name").value = ''
+				}
+				
+			}
+			function valid2(form){
+				var inl=form.inl.value;
+				
+				if (inl.replace (/\d/g, '').length){
+					alert("поле должно быть цивры");
+				}
+				else {
+					var a=delarrr(inl);
+				}
+			}
+			function arrr(name){
+				var table = document.createDocumentFragment();
+			   for (var q=0; q<1; q++){
+					var tr=document.createElement('tr');
+					for (var p=0; p<1; p++){
+						var td = document.createElement('td');
+						td.innerHTML=name ;
+						tr.appendChild(td);
+					}
+					table.appendChild(tr);
+				}
+			   document.getElementById('matrix').appendChild(table);
+			   document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+			}
+			function arrrvip(name){
+				var table = document.createDocumentFragment();
+			   for (var q=0; q<1; q++){
+					var tr=document.createElement('tr');
+					for (var p=0; p<1; p++){
+						var td = document.createElement('td');
+						td.innerHTML=name ;
+						tr.appendChild(td);
+					}
+					table.appendChild(tr);
+				}
+				var tab = document.getElementById('matrix');
+			   document.getElementById('matrix').insertBefore(table, tab.firstChild);
+			   document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+			}
+			function delarrr(n){
+				var table = document.getElementById('matrix');
+			   for (var q=0; q<n; q++){
+			        alert (table.firstChild.textContent);
+					document.getElementById('txt2').innerHTML = table.firstChild.textContent;
+					table.removeChild(table.firstChild)
+					document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+					var smen_img=smena();
+					document.getElementById("inl").value = '';
+					var cartoon=smena();
+				}
+			}
+			
+			function func() {
+			  alert( 'СДЕСЬ ДОЛЖЕН БЫТЬ РОЗЫГРЫШ' );
+			}
+			idTimer = setInterval('func();',4000);
+			
+			var mas=["Снимок экрана (90).png","Снимок экрана (90).png","Снимок экрана (90).png"]; // Все названия картинок
+				function smena(){
+				   var r=Math.floor(Math.random()*mas.length);
+				   document.getElementById("myimg").src=mas[r];
+				}
+		</script>
+		<img id='myimg' src="Снимок экрана (90).png"><br>
+		<input type='button' value="Сменить картинку" onclick="smena()">
+		
+
+	</body>
+</html>
