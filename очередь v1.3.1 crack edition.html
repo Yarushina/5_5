@@ -87,7 +87,7 @@
 					    var b=arrrvip(name);
 						list.unshift(name);
 					}
-					
+					 document.getElementById("name").value = ''
 				}
 				
 			}
@@ -137,10 +137,26 @@
 					document.getElementById('txt2').innerHTML = table.firstChild.textContent;
 					table.removeChild(table.firstChild)
 					document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
+					var smen_img=smena();
+					document.getElementById("inl").value = ''
 				}
-			}		
-		</script>
+			}
+			
+			function func() {
+			  alert( 'Привет' );
+			}
 
+			setTimeout(func, 3000);
+		</script>
+		<img id=myimg src="image1.jpg"><br>
+		<input type=button value="Сменить картинку" onclick="smena()">
+		<script>
+		var mas=["Снимок экрана (90).png","Снимок экрана (90).png","Снимок экрана (90).png"]; // Все названия картинок
+		function smena(){
+		   var r=Math.floor(Math.random()*mas.length);
+		   document.getElementById("myimg").src=mas[r];
+		}
+		</script>
 
 	</body>
 </html>
