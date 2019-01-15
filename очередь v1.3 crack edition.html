@@ -13,7 +13,7 @@
 		font: bold italic 110% sans-serif;
 		}
 		body{
-		background-color:yellow;
+		background-color:green;
 		}
 		span{
 			height:30Px;
@@ -26,20 +26,24 @@
 		}
 		label{
 			height:30Px;
-		color: black;
-		background-color:orange;
-		padding:8px;
-		font: bold italic 110% sans-serif;
+			color: black;
+			background-color:orange;
+			padding:8px;
+			font: bold italic 110% sans-serif;
 		}
 	</style>
 	<link rel="stylesheet" href="css.css">
 	</head>
 	<body>
-		<div>
-	    <div>'+'-обычный гражданин(встаёт в конец очереди)</div>
-		<div>'*'-VIP гражданин(встаёт в начало очереди)</div>
-		</div>
-		<br/>
+		<span>
+	    <span>'+'-обычный гражданин(встаёт в конец очереди);</span>
+		<span>'*'-VIP гражданин(встаёт в начало очереди).</span>
+		</span>
+		</br></br>
+		</br>
+		<label>Сейчас вышел из очереди:</label><span id='txt2'></span>
+		</br>
+		</br>
 		
 		<form name="myForm" action="" method="post" id="blaform">
 			<label for="mane">Введите имя вошедшего в очередь:</label>
@@ -49,7 +53,7 @@
 			
 			<input type="button" onclick="valid(document.getElementById('blaform'))" name="button" value="Готово">
 		</form>
-		<br/>
+		</br>
 		<form name="inlet" action="" method="post" id="intelform">
 			<label for="inl">Введите сколько людей должно выйти:</label>
 			<input type="text" name="inl" placeholder="Введите сколько людей должно выйти" id="inl"/> <br/><br/>
@@ -59,7 +63,9 @@
 		
 		<br/>
 		<label>Количечтво людей в очереди:</label><span id='txt1'></span>
-		<label>Сейчас вышел из очереди:</label><span id='txt2'></span>
+		</br>
+		</br>
+		
 		<table id="matrix" cellspacing="5" cellpadding="10" border="1" ></table>
 		<script>
 			var list=[];
