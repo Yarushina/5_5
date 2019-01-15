@@ -139,7 +139,7 @@
 					document.getElementById('txt1').innerHTML = document.getElementById('matrix').children.length;
 					var smen_img=smena();
 					document.getElementById("inl").value = '';
-					var cartoon=smena();
+					var cartoon=smena();//смена картинки
 				}
 			}
 			
@@ -148,14 +148,15 @@
 			}
 			idTimer = setInterval('func();',4000);
 			
-			var mas=["Снимок экрана (90).png","Снимок экрана (90).png","Снимок экрана (90).png"]; // Все названия картинок
+			var mas=["Снимок экрана (90).png","я тут","нееееееееееееееееет"]; // Все названия картинок
 				function smena(){
 				   var r=Math.floor(Math.random()*mas.length);
-				   document.getElementById("myimg").src=mas[r];
+				   document.getElementById("myimg").alt=mas[r];//ЕСЛИ ALT заменить на src товсё заработает ( document.getElementById("myimg").src=mas[r];) [этонужно чтоб бяло видно что хоть что то меняется']
 				}
 		</script>
-		<img id='myimg' src="Снимок экрана (90).png"><br>
-		<input type='button' value="Сменить картинку" onclick="smena()">
+		<img id='myimg' src="путь к файлу" alt="альтернативный текст" />
+		<br>
+
 		
 
 	</body>
